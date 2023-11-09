@@ -835,7 +835,8 @@ class Telemetry(pd.DataFrame):
         if self.size != 0:
             dt = self['Time'].dt.total_seconds().diff()
             dt.iloc[0] = self['Time'].iloc[0].total_seconds()
-            ds = self['Speed'] / 3.6 * dt
+            df = pd.DataFrame({'speed_t': self['Speed'], 'speed_t1': self['Speed'].shift(-1)})
+            ds = df.mean(axis=1) / 3.6 * dt
             return ds
         else:
             return pd.Series()

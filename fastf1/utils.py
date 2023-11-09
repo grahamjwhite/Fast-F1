@@ -98,7 +98,8 @@ def delta_time(
         return np.concatenate([[stream[0] - dstream_start], stream, [stream[-1] + dstream_end]])
 
     ltime = mini_pro(comp['Time'].dt.total_seconds().to_numpy())
-    ldistance = mini_pro(comp['Distance'].to_numpy())
+    multiplier = ref['Distance'][len(ref['Distance'])-1]/comp['Distance'][len(comp['Distance'])-1]
+    ldistance = mini_pro(comp['Distance'].to_numpy())*multiplier
     lap_time = np.interp(ref['Distance'], ldistance, ltime)
 
     delta = lap_time - ref['Time'].dt.total_seconds()
