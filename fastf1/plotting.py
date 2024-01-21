@@ -480,7 +480,7 @@ def _enable_fastf1_color_scheme():
     plt.rcParams['axes.facecolor'] = '#1e1c1b'
     # plt.rcParams['axes.facecolor'] = '#292625'
     plt.rcParams['axes.titlesize'] = 'x-large'
-    # plt.rcParams['font.family'] = 'Gravity'
+    plt.rcParams['font.family'] = 'Formula1'
     plt.rcParams['font.weight'] = 'medium'
     plt.rcParams['text.color'] = '#F1F1F3'
     plt.rcParams['axes.titlesize'] = '19'
