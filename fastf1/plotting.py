@@ -183,8 +183,12 @@ COMPOUND_COLORS: Dict[str, str] = {
 """Mapping of tyre compound names to compound colors (hex color codes).
 (current season only)"""
 
-COLOR_PALETTE: List[str] = ['#FF79C6', '#50FA7B', '#8BE9FD', '#BD93F9',
-                            '#FFB86C', '#FF5555', '#F1FA8C']
+COLOR_PALETTE: List[str] = ['white', 'red', 'green', 'blue',
+                            'gold', 'purple', 'orange', 'deepskyblue',
+                            'violet', 'lawngreen', 'lightcoral', 
+                            'turquoise', 'darkgrey', 'peru', 'pink',
+                            'coral', 'mediumpurple', 'firebrick', 'aquamarine',
+                            'teal']
 """The default color palette for matplotlib plot lines in fastf1's color
 scheme."""
 
